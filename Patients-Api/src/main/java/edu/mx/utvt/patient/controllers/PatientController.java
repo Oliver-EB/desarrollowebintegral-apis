@@ -51,7 +51,7 @@ public class PatientController {
 			git.commit().setMessage("eliminar archivo :" + patients).call();
 			System.out.println("Archivo eliminado exitosamente");
 		} catch (IOException | GitApiException e) {
-			System.out.println("Error :" + e.getMessage());
+			System.out.println("Error al eliminar archivo" + e.getMessage());
 		}
 
 	}

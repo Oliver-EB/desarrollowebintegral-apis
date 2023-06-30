@@ -45,7 +45,7 @@ public class PatientController {
 
 	public void eliminarArchivo(String patients) {
 		try {
-			RepositoryCache repository = FileRepositoryBuilder.create(new File(".git"));
+			Repository repository = FileRepositoryBuilder.create(new File(".git"));
 			Git git = new Git(repository);
 			git.rm().addFilepattern(nombreArchivo).call();
 			git.commit().setMessage("eliminar archivo :" + patients).call();
